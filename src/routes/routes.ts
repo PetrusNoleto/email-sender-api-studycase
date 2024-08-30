@@ -1,3 +1,4 @@
-import { routeCreateNewEmail } from "./email/create";
+import { routeSendNewEmail } from "./email/send";
 
-export const routes = [routeCreateNewEmail]
+
+export const routes = [routeSendNewEmail]
