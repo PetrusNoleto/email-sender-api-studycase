@@ -6,7 +6,9 @@
     "dev": "ts-node-dev ./src/main.ts",
     "build": "tsc",
     "start": "node dist/main.js",
-    "aapaneldeploy": "npm install && npm run start"
+    "createDockerContainer":"npm run build && docker build -t email-send-api-studycase .",
+    "dockerContainer":"docker run -p 4900:4900 email-send-api-studycase",
+    "deploy":"npm run createDockerContainer && npm run dockerContainer"
   },
   "author": "",
   "license": "ISC",
