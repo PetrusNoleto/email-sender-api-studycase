@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "node dist/main.js",
     "createDockerContainer":"npm run build && docker build -t email-send-api-studycase .",
-    "dockerContainer":"docker run -p 4900:4900 email-send-api-studycase",
+    "dockerContainer":"docker run email-send-api-studycase",
+    "saveDockerLocal":"docker save -o emailsenderapi.zip email-send-api-studycase",
     "deploy":"npm run createDockerContainer && npm run dockerContainer"
   },
   "author": "",
